@@ -1,0 +1,200 @@
+{% extends 'master.html' %}
+{% load static %}
+
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+{% comment %} CAROUSEL {% endcomment %}
+<div id="default-carousel" class="relative w-full pt-5 mx-auto text-center rounded-xl bg-orange-300" data-carousel="slide">
+  <!-- Carousel wrapper -->
+  <div class="relative overflow-hidden rounded-lg h-[32rem]  backdrop-blur-sm">
+       <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out rounded-lg" data-carousel-item>
+          <img src="{% static 'images/front.jpg' %}" class="absolute block w-3/4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out rounded-lg" data-carousel-item>
+          <img src="{% static 'images/front2.jpg' %}" class="absolute block w-3/4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out rounded-lg" data-carousel-item>
+          <img src="{% static 'images/people.jpg' %}" class="absolute block w-3/4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out rounded-lg" data-carousel-item>
+          <img src="{% static 'images/people.jpg' %}" class="absolute block w-3/4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out rounded-lg" data-carousel-item>
+          <img src="{% static 'images/people.jpg' %}" class="absolute block w-3/4 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-lg" alt="...">
+  </div>
+  </div>
+  <!-- Slider indicators -->
+  <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+  </div>
+  <!-- Slider controls -->
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+          </svg>
+          <span class="sr-only">Previous</span>
+      </span>
+  </button>
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+          </svg>
+          <span class="sr-only">Next</span>
+      </span>
+  </button>
+</div>
+
+
+{% comment %} MISSION & VISION {% endcomment %}
+<section id="section1" class=" body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <h1 class="text-3xl font-medium title-font mb-12 text-center bg-gray-100 text-black rounded-xl py-5">MISSION AND VISION</h1>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 shadow-2xl bg-opacity-40 p-8 rounded-xl">
+          <h1 class="text-3xl font-medium title-font mb-12 text-center text-black">MISSION</h1>
+          <p class="leading-relaxed mb-6 text-black">To foster a safe, inclusive, and thriving community in Barangay San Nicolas III, dedicated to the well-being and progress of all residents. We commit to providing essential services, promoting sustainable development, and ensuring the active engagement of every member in shaping a harmonious and resilient neighborhood.</p>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 shadow-2xl bg-opacity-40 p-8 rounded-xl">
+          <h1 class="text-3xl font-medium title-font mb-12 text-center text-black">VISION</h1>
+          <p class="leading-relaxed mb-6 text-black">Barangay San Nicolas III envisions a future where every individual enjoys a high quality of life, empowered by a supportive community that values unity, integrity, and innovation. We aspire to create an environment where education, health, and social welfare are prioritized, fostering a Barangay that serves as a model of progress and unity for generations to come.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="section2" class="mt-32 flex text-center justify-center">
+  <h2 class=" font-bold pt-25 text-6xl title-font tracking-wider text-center text-black">ABOUT US</h2>
+  <div class="flex px-5"><i class="fa-regular fa-address-card fa-4x text-black"></i></div>
+</div>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="xl:w-3/4 lg:w-3/4 w-full mx-auto text-center p-5 shadow-2xl rounded-2xl bg-gray-100 bg-opacity-40">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-black mb-8" viewBox="0 0 975.036 975.036">
+        <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+      </svg>
+      <p class="leading-relaxed text-2xl text-black">"Welcome to the Integrated Management System for Barangay San Nicolas III! Here, we unite technology and community welfare. Explore a seamless experience in locating households and extending assistance to those who need it most. Together, we build a resilient and caring Barangay, ensuring no one is left behind. Welcome to a future of empowered community engagement!"</p>
+      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+    </div>
+  </div>
+</section>
+
+
+{% comment %} ANNOUNCEMENT {% endcomment %}
+
+<section class="text-black body-font"> 
+  <div class="container px-5 py-24 mx-auto flex flex-wrap rounded-lg bg-gray-100 shadow-2xl bg-opacity-40">
+    <div class="lg:w-2/3 mx-auto rounded-lg">
+      <div class="flex items-center justify-center mt-32 mb-20 text-black">
+        <h1 class="ml6">
+          <span class="text-wrapper">
+            <span class="letters">ANNOUNCEMENT</span>
+          </span>
+        </h1>
+        <div class="px-5 pb-3"><i class="fa-solid fa-bullhorn fa-4x text-black"></i></div>
+      </div>
+      <div class="flex flex-wrap w-full rounded-lg hover:scale-110 duration-500 bg-gray-800 py-32 px-10 relative mb-4">
+        <img alt="gallery" class="rounded-lg w-full bg-orange-300 object-cover h-full object-center block opacity-25 absolute inset-0" src="{% static 'images/ANN1.jpg' %}">
+        <div class="text-center relative z-10 w-full">
+          <a class="mt-3 text-indigo-300 inline-flex items-center">Learn More
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-2 rounded-lg">
+        <div class="px-2 w-1/2 rounded-lg bg-orange-300">
+          <div class="flex flex-wrap w-full rounded-lg  hover:scale-110 duration-500 bg-gray-800 sm:py-24 py-16 sm:px-10 px-6 relative">
+            <img alt="gallery" class="rounded-lg w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="{% static 'images/ANN1.jpg' %}">
+            <div class="text-center relative z-10 w-full">
+              <a class="mt-3 text-indigo-300 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 w-1/2 rounded-lg">
+          <div class="flex flex-wrap w-full rounded-lg  hover:scale-110 duration-500 bg-gray-800 sm:py-24 py-16 sm:px-10 px-6 relative">
+            <img alt="gallery" class="rounded-lg w-full object-cover h-full object-center block opacity-25 absolute inset-0" src="{% static 'images/ANN1.jpg' %}">
+            <div class="text-center relative z-10 w-full">
+              <a class="mt-3 text-indigo-300 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% comment %} NEWS AND UPDATES {% endcomment %}
+<div class="mt-32 mb-20">
+  <h2 class=" font-medium pt-25 text-6xl title-font tracking-wider text-center text-black">NEWS AND UPDATES</h2>
+</div>
+<section class="text-black body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap bg-gray-100 shadow-2xl bg-opacity-40 rounded-xl">
+    <div class="flex w-full mb-20 flex-wrap">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font text-black lg:w-1/3 lg:mb-0 mb-4">DAILY NEWS AND UPDATES</h1>
+      <p class="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-lg">Stay informed with the latest happenings in Barangay San Nicolas III through our News and Updates section. 
+        Explore community events, important announcements, and initiatives aimed at enhancing the well-being of our residents. Stay connected and engaged as we share stories 
+        that reflect the vibrant spirit of our community and highlight the positive strides we are making together. Join us in building a stronger and more informed Barangay 
+        San Nicolas III!</p>
+    </div>
+    <div class="flex flex-wrap md:-m-2 -m-1">
+      <div class="flex flex-wrap w-1/2">
+        <div class="md:p-2 p-1 w-1/2 rounded-lg">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 transition w-full object-cover h-52 object-center block" src="{% static 'images/acts1.jpg' %}">
+        </div>
+        <div class="md:p-2 p-1 w-1/2 rounded-lg">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 w-full object-cover h-52 object-center block" src="{% static 'images/acts.jpg' %}">
+        </div>
+        <div class="md:p-2 p-1 w-full rounded-lg">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 w-full h-96 object-cover object-center block" src="{% static 'images/acts2.jpg' %}">
+        </div>
+      </div>
+      <div class="flex flex-wrap w-1/2 rounded-lg">
+        <div class="md:p-2 p-1 w-full">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 w-full h-96 object-cover object-center block" src="{% static 'images/acts4.jpg' %}">
+        </div>
+        <div class="md:p-2 p-1 w-1/2 rounded-lg">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 w-full object-cover h-52 object-center block" src="{% static 'images/acts3.jpg' %}">
+        </div>
+        <div class="md:p-2 p-1 w-1/2 rounded-lg">
+          <img alt="gallery" class="hover:scale-105 rounded-lg duration-500 border-4 border-orange-300 hover:border-blue-500 w-full object-cover h-52 object-center block" src="{% static 'images/acts5.jpg' %}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+{% endblock content %}
+
+{% block content1 %}
+
+
+{% endblock content1 %}
+
+

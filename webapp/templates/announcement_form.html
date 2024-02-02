@@ -1,0 +1,42 @@
+{% extends 'master.html' %}
+
+{% block title %}Annoucement{% endblock title %}
+
+{% block content %}
+
+<div class="flex item-center justify-center mt-20 h-screen">
+    <div class=" mt-10 p-10 w-1/2 bg-gray-100 shadow-2xl bg-opacity-40 rounded-xl h-max">
+        <h1 class="flex items-center justify-center font-extrabold text-4xl">Annoucements</h1>
+        <form method="post" action="{% url 'create_announcement' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="flex">
+                <h1>Title</h1><p class="text-red-700">*</p>
+            </div>
+
+            <div class="mb-4">           
+                {{ form.title }}
+            </div>
+
+            <div class="flex">
+                <h1>Content</h1><p class="text-red-700">*</p>
+            </div>
+
+            <div class="mb-4">
+                {{ form.content }}
+            </div>
+
+            <div class="mb-4">
+                {{ form.image }}
+            </div>
+
+            <div class="mb-4">
+                {{ form.barangay }}
+            </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="btn btn-outline btn-accent w-28">{% if form.instance.pk %}Update{% else %}Create{% endif %} Item</button>
+                </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

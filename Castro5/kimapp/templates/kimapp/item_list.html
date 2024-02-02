@@ -1,0 +1,39 @@
+<!-- templates/myapp/item_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+{% block content %}
+  <h1 class="flex items-center justify-center py-2 font-bold text-5xl">Item List</h1>
+
+  <div class="border-black border-2 w-1/2">
+    <ul>
+    {% for item in items %}
+      <li class="border-b border-gray-300 py-2 bg-slate-400 text-black text-2xl pl-4">
+        <a href="{% url 'item_detail' pk=item.pk %}" class="flex">{{ item.name }}</a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  
+
+  <!-- Add the Create Item button -->
+  <div class="pt-4">
+    <a href="{% url 'item_create' %}">
+      <button class="btn btn-outline">Create Item</button>
+    </a> 
+  </div>
+     
+    
+    
+{% endblock %}
+
+</body>
+</html>

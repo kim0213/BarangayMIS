@@ -1,0 +1,52 @@
+{% extends 'master.html' %}
+
+{% block title %}Announcement List{% endblock title %}
+
+{% block content %}
+
+<div class="mt-20 ml-6">
+    <a href="{% url "register_resident" %}">
+        <button  class="btn btn-accent w-28">Register</button>
+    </a>
+</div>
+<div class="min-h-screen mt-">
+    <table class="w-10/12 border-collapse border bg-white border-orange-300">
+        <thead>
+            <tr>
+                <th class="border border-gray-300 p-2">Last Name</th>
+                <th class="border border-gray-300 p-2">First Name</th>
+                <th class="border border-gray-300 p-2">Middle Name</th>
+                <th class="border border-gray-300 p-2">Gender</th>
+                <th class="border border-gray-300 p-2">Occupation</th>
+                <th class="border border-gray-300 p-2">Address</th>
+                <th class="border border-gray-300 p-2">Contact Number</th>
+                <th class="border border-gray-300 p-2">Household Member</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resident in residents %}
+            <tr>
+                
+                <td class="border border-gray-300 p-2 text-center"><a href="{% url "resident_detail" pk=resident.pk %}">{{ resident.last_name }}</a></td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.first_name }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.middle_name }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.gender }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.occupation }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.address }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.contact }}</td>
+                <td class="border border-gray-300 p-2 text-center">{{ resident.household }}</td>
+                
+                <td class="border border-gray-300 p-2 text-center">
+                    <a href="{% url "resident_detail" pk=resident.pk %}">
+                        <button class="text-blue-500">Edit</button>
+                    </a>
+                    <a href="{% url 'resident_delete' resident.pk %}" class="pl-2">    
+                        <button class="text-red-500 ml-2">Delete</button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

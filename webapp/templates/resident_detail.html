@@ -1,0 +1,59 @@
+{% extends 'master.html' %}
+
+{% block title %}Annoucement{% endblock title %}
+
+{% block content %}
+
+<a class="fixed mt-28 ml-5" href="{% url "resident_list" %}">
+    <i class="fa-solid fa-arrow-left"></i>
+    <button class="underline underline-offset-4">Back to resident</button>
+</a>
+
+<div class="container mt-10 p-6">
+    <h1 class="flex items-center justify-center font-extrabold text-6xl pb-5">Residents</h1>
+
+    <div class="flex items-center justify-center">
+        <div class="rounded-md w-1/2 bg-gray-100 shadow-2xl bg-opacity-40">
+            <div class="font-bold p-5 h-7">
+                {{resident.first_name}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.last_name}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.middle_name}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.gender}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.occupation}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.address}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.contact}}
+            </div>
+            <div class="mx-5 my-5 h-40 p-4 bg-white rounded-md">
+                {{resident.household}}
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="flex items-center justify-center p-8">
+        <a href="{% url 'resident_edit' resident.pk %}" class="pr-2">
+            <button class="btn btn-primary w-16">Edit</button>
+        </a>
+        <a href="{% url 'resident_delete' resident.pk %}" class="pl-2">
+            <button class="btn btn-primary w-16">Delete</button>
+        </a>
+        <br>
+    </div>
+
+    
+</div>
+<div class="h-screen"></div>
+
+{% endblock content %}
